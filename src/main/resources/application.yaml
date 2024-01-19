@@ -1,0 +1,17 @@
+server:
+  port: 8081
+
+spring:
+  r2dbc:
+    url: r2dbc:pool:postgres://localhost:5432/payment_provider
+    username: postgres
+    password: 1234
+  flyway:
+    url: jdbc:postgresql://localhost:5432/payment_provider
+    locations: classpath:db/migrations
+    user: postgres
+    password: 1234
+util:
+  webclient:
+    baseurl: https://webhook.site/d52e0c2b-53d9-43c4-b8d0-c491c4c90f92
+    timeout: 2000

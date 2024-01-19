@@ -1,0 +1,8 @@
+server:
+  port: 8081
+
+spring:
+  r2dbc:
+    url: r2dbc:pool:postgres://localhost:5432/payment_provider
+    username: postgres
+    password: 1234
