@@ -1,10 +1,6 @@
 package com.example.paymentprovider.entity;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateTimeDeserializer;
-import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer;
 import lombok.*;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.annotation.Transient;
@@ -21,6 +17,7 @@ public class Webhook {
 
     @Id
     private String id;
+    private String providerTransactionId;
     private String externalTransactionId;
     private TransactionType transactionType;
     private PaymentMethod paymentMethod;

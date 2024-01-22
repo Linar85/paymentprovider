@@ -1,1 +1,2 @@
-java -jar paymentprovider-0.0.1-SNAPSHOT.jar
+#!/bin/bash
+java -jar paymentprovider-0.0.1.jar

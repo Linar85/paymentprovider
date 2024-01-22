@@ -29,8 +29,6 @@ public class TransactionDto {
     private CustomerDto customer;
     private Long customerId;
     private LocalDateTime createdAt;
-    //    @JsonDeserialize(using = LocalDateTimeDeserializer.class)
-//    @JsonSerialize(using = LocalDateTimeSerializer.class)
     private LocalDateTime updatedAt;
 
 

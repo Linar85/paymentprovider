@@ -7,15 +7,18 @@ import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Table;
 
-@Table(name = "customers")
+import java.time.LocalDateTime;
+
+@Table("webhook_responses")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder(toBuilder = true)
-public class Customer {
+public class WebhookResponse {
+
     @Id
-    private Long externalId;
-    private String firstName;
-    private String lastName;
-    private String country;
+    private Long id;
+    private String webhookId;
+    private String body;
+    private LocalDateTime createdAt;
 }

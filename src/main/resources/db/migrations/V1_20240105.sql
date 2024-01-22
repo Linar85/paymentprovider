@@ -48,6 +48,7 @@ create table transactions
 create table webhooks
 (
     id                      varchar primary key DEFAULT gen_random_uuid(),
+    provider_transaction_id varchar unique,
     external_transaction_id varchar unique,
     transaction_type        varchar,
     status                  varchar,
@@ -59,6 +60,15 @@ create table webhooks
     currency                varchar,
     external_created_at     timestamp,
     language_tr             varchar
+);
+
+create table webhook_responses
+(
+    id         serial primary key,
+    webhook_id varchar,
+    body       varchar,
+    created_at timestamp,
+    constraint fk_webhook_id foreign key (webhook_id) references webhooks (id)
 );
 
 create table cards

@@ -24,11 +24,7 @@ public class Merchant{
     private Long id;
     private String username;
     private String secretKey;
-    @JsonDeserialize(using = LocalDateTimeDeserializer.class)
-    @JsonSerialize(using = LocalDateTimeSerializer.class)
     private LocalDateTime createdAt;
-    @JsonDeserialize(using = LocalDateTimeDeserializer.class)
-    @JsonSerialize(using = LocalDateTimeSerializer.class)
     private LocalDateTime updatedAt;
 
 

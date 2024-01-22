@@ -23,8 +23,6 @@ public class Wallet {
     private Integer balance;
     private Integer delta;
     private Currency currency;
-    @JsonDeserialize(using = LocalDateTimeDeserializer.class)
-    @JsonSerialize(using = LocalDateTimeSerializer.class)
     private LocalDateTime updatedAt;
     @Transient
     @ToString.Exclude

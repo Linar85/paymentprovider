@@ -11,9 +11,11 @@ import org.mapstruct.Mapping;
 public interface WebhookMapper {
 
     @Mapping(target = "id", ignore = true)
+    @Mapping(target = "providerTransactionId", source = "transaction.id")
     WebhookDto mapTransactionToWebhookDto(Transaction transaction);
 
     @Mapping(target = "id", ignore = true)
+    @Mapping(target = "providerTransactionId", source = "transaction.id")
     Webhook mapTransactionToWebhook(Transaction transaction);
 
     WebhookDto map(Webhook entity);
